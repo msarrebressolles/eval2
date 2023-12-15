@@ -17,22 +17,38 @@ int main() {
     cout << "" << endl << endl;
     std::cin >> choix;
     std::cout << "Vous avez saisi : " << choix << std::endl;
+    // traitement du choix de l'utilisateur
     switch (choix) {
     case 1:
-      (nbrePlaces--);
+    // parking plein
+      if (nbrePlaces == 0) {
+        std::cout << "PARKING COMPLET\n";
+      } else {
+        (nbrePlaces--);
+      }
       break;
     case 2:
+      std::cout << "\n";
+      std::cout << "Nombre de places disponibles :\n";
       std::cout << nbrePlaces;
       break;
     case 3:
-      (nbrePlaces++);
+      // parking vide
+      if (nbrePlaces == 10) {
+        std::cout << "10 places disponibles\n";
+      } else {
+        (nbrePlaces++);
+      }
       break;
     case 4:
+      std::cout << "\n";
       std::cout << "Au-revoir\n";
       break;
     default:
       std::cout << "Vous n'avez pas choisi un nombre valide\n";
     }
+    cout << "" << endl << endl;
+    cout << "" << endl << endl;
     cout << "" << endl << endl;
   } while (choix != 4);
   return 0;
