@@ -17,6 +17,22 @@ int main() {
     cout << "" << endl << endl;
     std::cin >> choix;
     std::cout << "Vous avez saisi : " << choix << std::endl;
+    switch (choix) {
+    case 1:
+      (nbrePlaces--);
+      break;
+    case 2:
+      std::cout << nbrePlaces;
+      break;
+    case 3:
+      (nbrePlaces++);
+      break;
+    case 4:
+      std::cout << "Au-revoir\n";
+      break;
+    default:
+      std::cout << "Vous n'avez pas choisi un nombre valide\n";
+    }
     cout << "" << endl << endl;
   } while (choix != 4);
   return 0;
