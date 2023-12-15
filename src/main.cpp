@@ -13,6 +13,9 @@ int main() {
   cout << "2 - Nombre de places disponibles" << endl <<endl;
   cout << "3 - Sortie du parking" << endl <<endl;
   cout << "4 - Quitter" << endl <<endl;
+  cout << "" <<endl <<endl;
+  std::cin >> choix;
+  std::cout << "Vous avez saisi : " << choix << std::endl;
 
   return 0;
 }
