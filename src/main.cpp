@@ -20,8 +20,9 @@ int main() {
     // traitement du choix de l'utilisateur
     switch (choix) {
     case 1:
-    // parking plein
+      // parking plein
       if (nbrePlaces == 0) {
+        std::cout << "\n";
         std::cout << "PARKING COMPLET\n";
       } else {
         (nbrePlaces--);
@@ -30,7 +31,13 @@ int main() {
     case 2:
       std::cout << "\n";
       std::cout << "Nombre de places disponibles :\n";
-      std::cout << nbrePlaces;
+      // affichage complet
+      if (nbrePlaces == 0) {
+        std::cout << "\n";
+        std::cout << "PARKING COMPLET\n";
+      } else {
+        std::cout << nbrePlaces;
+      }
       break;
     case 3:
       // parking vide
